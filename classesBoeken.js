@@ -24,69 +24,24 @@ The average pages in the libaray are 577.7 pages
 The total of pages are 4861
 
 */
-function makeidT(length) {
-  let result = '';
-  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-  const charactersLength = characters.length;
-  let counter = 0;
-  while (counter < length) {
-    result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    counter += 1;
-  }
-  return result;
-}
 
-console.log(makeidT(5));
 
-function makeidN(length) {
-  let result = '';
-  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-  const charactersLength = characters.length;
-  let counter = 0;
-  while (counter < length) {
-    result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    counter += 1;
-  }
-  return result;
-}
+// toch per deel een class maken 
 
-console.log(makeidN(5));
-
+// welke boeken?
 class boeken {
-    constructor(owner, title, author, pages){
-      this.owner = owner
-      this.title = title;
-      this.author = author;
-      this.pages = pages;
-      this.booklist = []
+  constructor(title, author, pages) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
     }
-
-booklist(){
-  const book = this.booklist.length + 1
-  this.booklist.push(book)
-}
-
-owners(){
-return this.owner + 
-
-}
-}
-
-// boekenlijsten aanmaken - na elke aankoop
-const boek1 = new boeken("Pascal", "boek-1", makeid(5), makeidN(5 ));
-const boek2 = new boeken("Pascal", "boek-2", makeid(5), makeidN(5 ));
-const boek3 = new boeken("Pascal", "boek-3", makeid(5), makeidN(5 ));
-const boek4 = new boeken("Pascal", "boek-4", makeid(5), makeidN(5 ));
-const boek5 = new boeken("Pascal", "boek-5", makeid(5), makeidN(5 ));
-const boek6 = new boeken("Pascal", "boek-6", makeid(5), makeidN(5 ));
-const boek7 = new boeken("Pascal", "boek-7", makeid(5), makeidN(5 ));
-const boek8 = new boeken("Pascal", "boek-8", makeid(5), makeidN(5 ));
-const boek9 = new boeken("Pascal", "boek-9", makeid(5), makeidN(5 ));
-const boek10 = new boeken("Pascal", "boek-10", makeid(5), makeidN(5 ));
-const boek11 = new boeken("Iris", "boek-11", makeid(5), makeidN(5 ));
+  }
 
 
-const Pascal = new boeken("Pascal");
-const Iris = new boeken("Iris");
-
+// van wie zijn doe boeken?
+  class bibliotheek{
+this.owner = owner;
+this.boeken = [];
+  }
+  constructor(owner){}
 
