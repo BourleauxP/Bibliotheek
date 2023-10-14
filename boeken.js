@@ -1,1 +1,1 @@
-var boeken = 1;
+const naam = "Pascal";
