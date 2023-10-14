@@ -24,7 +24,60 @@ The average pages in the libaray are 577.7 pages
 The total of pages are 4861
 
 */
+function makeidT(length) {
+  let result = '';
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  const charactersLength = characters.length;
+  let counter = 0;
+  while (counter < length) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    counter += 1;
+  }
+  return result;
+}
+
+console.log(makeidT(5));
+
+function makeidN(length) {
+  let result = '';
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  const charactersLength = characters.length;
+  let counter = 0;
+  while (counter < length) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    counter += 1;
+  }
+  return result;
+}
+
+console.log(makeidN(5)),;
 
 class boeken {
-    constructor(owner, pages)
+    constructor(title, author, pages){
+      this.title = title;
+      this.author = author;
+      this.pages = pages;
+      this.booklist = []
+    }
+
+booklist(){
+  const book = this.booklist.length + 1
+  this.booklist.push(book)
+}    
+
+
+
 }
+
+const tittle1 = New boeken('title-1', makeid(5), makeidN(5 )); 
+const tittle2 = New boeken('title-2', makeid(5), makeidN(5 )); 
+const tittle3 = New boeken('title-3', makeid(5), makeidN(5 )); 
+const tittle4 = New boeken('title-4', makeid(5), makeidN(5 )); 
+const tittle5 = New boeken('title-5', makeid(5), makeidN(5 )); 
+const tittle6 = New boeken('title-6', makeid(5), makeidN(5 )); 
+const tittle7 = New boeken('title-7', makeid(5), makeidN(5 ));
+const tittle8 = New boeken('title-8', makeid(5), makeidN(5 ));
+const tittle9 = New boeken('title-9', makeid(5), makeidN(5 ));
+const tittle10 = New boeken('title-10', makeid(5), makeidN(5 )); 
+const tittle11 = New boeken('title-11', makeid(5), makeidN(5 ));
+const tittle12 = New boeken('title-12', makeid(5), makeidN(5 )); 
