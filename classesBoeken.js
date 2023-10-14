@@ -28,7 +28,7 @@ The total of pages are 4861
 // toch per deel een class maken
 
 // welke boeken?
-class boeken {
+class books {
   constructor(title, author, pages) {
     this.title = title;
     this.author = author;
@@ -40,20 +40,76 @@ class boeken {
 class bibliotheek {
   constructor(owner) {
     this.owner = owner;
-    this.boeken = [];
+    this.books = [];
   }
-}
-// voor alle vragen die je hebt een onderdeel maken
-boekToevegen();
 
-boekVerwijderen();
+  // voor alle vragen die je hebt een onderdeel maken
+  bookToevoegen(title) {
+    const author = this.randomAuthor();
+    const pages = Math.floor(Math.random() * 951) + 50; // rabdom tss 0 en 1 * 951 (minimum 50 pagina's -> verchil met totaal 1000)
+    const newBook = new books(title, author, pages); //normaal hiet gewoon autheur en blz invoegen
+    this.books.push(newBook); // nieuwe boek toevoegen aan de array in de class Bibliotheek
+  }
 
-paginaToevoegen();
+  //boekVerwijderen(title);
 
-paginaVerwijderen();
+  booksTotal() {
+    return this.books.length; // vanuit de bibliotheek de lijst van boeken gaan tellen
+  }
 
-boekenTotaal();
+  paginasTotal() {
+    let total = 0;
+    for (let i = 0; i < this.books.length; i++) {
+      const book = this.books[i];
+      if (book.pages) {
+        total += book.pages;
+      }
+    }
+    return total;
+  }
 
-paginasGemiddeld();
+  pagesGemiddeld() {
+    return this.paginasTotal() / this.books.length; //het vorige deel delen door het aantal boeken in de lijst
+  }
 
-paginasTotaal();
+  randomAuthor() {
+    const letters = "abcdefghijklmnopqrstuvwxyz";
+    let auteur = "";
+    for (let i = 0; i < 10; i++) {
+      auteur += letters[Math.floor(Math.random() * letters.length)];
+    }
+    return auteur;
+  }
+} // alles wat met 1 class te maken heeft moet binnen die akkolades staan!
+
+// eigenaars boeken aanmaken
+const bibliotheekPascal = new bibliotheek("Pascal");
+const bibliotheekIris = new bibliotheek("Iris");
+
+// boeken aan een speciefieke bibliotheek toevoegen
+bibliotheekPascal.bookToevoegen("javascript");
+bibliotheekIris.bookToevoegen("Het Menselijk Lichaam");
+bibliotheekPascal.bookToevoegen("css");
+bibliotheekPascal.bookToevoegen("git");
+bibliotheekPascal.bookToevoegen("codewars");
+bibliotheekPascal.bookToevoegen("terminal");
+bibliotheekPascal.bookToevoegen("VisualStudioCode");
+bibliotheekPascal.bookToevoegen("Node");
+bibliotheekPascal.bookToevoegen("database");
+bibliotheekPascal.bookToevoegen("HTML");
+bibliotheekPascal.bookToevoegen("api");
+bibliotheekPascal.bookToevoegen("sync");
+
+//vragen wat je nodig hebt?
+console.log(
+  "aantal boeken in de bib van Pascal",
+  bibliotheekPascal.booksTotal()
+);
+console.log("aantal boeken in de bib van Iris", bibliotheekIris.booksTotal());
+
+console.log(
+  "totaal aantal blz boeken Pascal",
+  bibliotheekPascal.paginasTotal()
+);
+
+console.log(bibliotheekPascal);
