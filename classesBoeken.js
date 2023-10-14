@@ -36,10 +36,24 @@ class boeken {
   }
 }
 
-// van wie zijn doe boeken?
+// van wie zijn de boeken?
 class bibliotheek {
   constructor(owner) {
     this.owner = owner;
     this.boeken = [];
   }
 }
+// voor alle vragen die je hebt een onderdeel maken
+boekToevegen();
+
+boekVerwijderen();
+
+paginaToevoegen();
+
+paginaVerwijderen();
+
+boekenTotaal();
+
+paginasGemiddeld();
+
+paginasTotaal();
