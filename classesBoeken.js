@@ -67,21 +67,26 @@ booklist(){
 }
 
 owners(){
-returnn this.
+return this.owner + 
 
 }
 }
 
-const tittle1 = New boeken('title-1', makeid(5), makeidN(5 )); 
-// const tittle2 = New boeken('title-2', makeid(5), makeidN(5 )); 
-// const tittle3 = New boeken('title-3', makeid(5), makeidN(5 )); 
-// const tittle4 = New boeken('title-4', makeid(5), makeidN(5 )); 
-// const tittle5 = New boeken('title-5', makeid(5), makeidN(5 )); 
-// const tittle6 = New boeken('title-6', makeid(5), makeidN(5 )); 
-// const tittle7 = New boeken('title-7', makeid(5), makeidN(5 ));
-// const tittle8 = New boeken('title-8', makeid(5), makeidN(5 ));
-// const tittle9 = New boeken('title-9', makeid(5), makeidN(5 ));
-// const tittle10 = New boeken('title-10', makeid(5), makeidN(5 )); 
-// const tittle11 = New boeken('title-11', makeid(5), makeidN(5 ));
-// const tittle12 = New boeken('title-12', makeid(5), makeidN(5 )); 
+// boekenlijsten aanmaken - na elke aankoop
+const boek1 = new boeken("Pascal", "boek-1", makeid(5), makeidN(5 ));
+const boek2 = new boeken("Pascal", "boek-2", makeid(5), makeidN(5 ));
+const boek3 = new boeken("Pascal", "boek-3", makeid(5), makeidN(5 ));
+const boek4 = new boeken("Pascal", "boek-4", makeid(5), makeidN(5 ));
+const boek5 = new boeken("Pascal", "boek-5", makeid(5), makeidN(5 ));
+const boek6 = new boeken("Pascal", "boek-6", makeid(5), makeidN(5 ));
+const boek7 = new boeken("Pascal", "boek-7", makeid(5), makeidN(5 ));
+const boek8 = new boeken("Pascal", "boek-8", makeid(5), makeidN(5 ));
+const boek9 = new boeken("Pascal", "boek-9", makeid(5), makeidN(5 ));
+const boek10 = new boeken("Pascal", "boek-10", makeid(5), makeidN(5 ));
+const boek11 = new boeken("Iris", "boek-11", makeid(5), makeidN(5 ));
+
+
+const Pascal = new boeken("Pascal");
+const Iris = new boeken("Iris");
+
 
