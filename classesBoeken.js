@@ -69,7 +69,7 @@ class bibliotheek {
   }
 
   pagesGemiddeld() {
-    return this.paginasTotal() / this.books.length; //het vorige deel delen door het aantal boeken in de lijst
+    return Math.round(this.paginasTotal() / this.books.length); //het vorige deel delen door het aantal boeken in de lijst
   }
 
   randomAuthor() {
@@ -112,4 +112,10 @@ console.log(
   bibliotheekPascal.paginasTotal()
 );
 
-console.log(bibliotheekPascal);
+console.log(
+  "het gemiddelde aantal blz voor Pascal is:",
+  bibliotheekPascal.pagesGemiddeld()
+);
+
+console.log("Pascal heeft volgende boeken:", bibliotheekPascal);
+console.log("Iris heeft volgende boeken", bibliotheekIris);
