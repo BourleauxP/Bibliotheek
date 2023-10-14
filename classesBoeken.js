@@ -25,8 +25,7 @@ The total of pages are 4861
 
 */
 
-
-// toch per deel een class maken 
+// toch per deel een class maken
 
 // welke boeken?
 class boeken {
@@ -34,14 +33,13 @@ class boeken {
     this.title = title;
     this.author = author;
     this.pages = pages;
-    }
   }
-
+}
 
 // van wie zijn doe boeken?
-  class bibliotheek{
-this.owner = owner;
-this.boeken = [];
+class bibliotheek {
+  constructor(owner) {
+    this.owner = owner;
+    this.boeken = [];
   }
-  constructor(owner){}
-
+}
