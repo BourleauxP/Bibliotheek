@@ -33,31 +33,40 @@ class books {
     this.title = title;
     this.author = author;
     this.pages = pages;
-  }
+  } // geen array nodig omdat het over 1 boek gaat
 }
 
 // van wie zijn de boeken?
 class bibliotheek {
   constructor(owner) {
     this.owner = owner;
-    this.books = [];
+    this.books = []; // array nodig omdat hier verschillende boeken inkomen en verschillende eigenaars
   }
 
   // voor alle vragen die je hebt een onderdeel maken
   bookToevoegen(title) {
     const author = this.randomAuthor();
-    const pages = Math.floor(Math.random() * 951) + 50; // rabdom tss 0 en 1 * 951 (minimum 50 pagina's -> verchil met totaal 1000)
+    const pages = Math.floor(Math.random() * 951) + 50; // rabdom tss 0 en 1 * 951 (minimum 50 pagina's -> verschil met totaal 1000)
     const newBook = new books(title, author, pages); //normaal hiet gewoon autheur en blz invoegen
     this.books.push(newBook); // nieuwe boek toevoegen aan de array in de class Bibliotheek
   }
 
-  //boekVerwijderen(title);
+  bookVerwijder(title) {
+    for (let i = 0; i < this.books.length; i++) {
+      const book = this.books[i];
+      if (book.titel === titel) {
+        this.books.splice(i, 1);
+        i--; // Om het verwijderde boek over te slaan
+      }
+    }
+  }
 
   booksTotal() {
     return this.books.length; // vanuit de bibliotheek de lijst van boeken gaan tellen
   }
 
   paginasTotal() {
+    //loop door de boeken
     let total = 0;
     for (let i = 0; i < this.books.length; i++) {
       const book = this.books[i];
